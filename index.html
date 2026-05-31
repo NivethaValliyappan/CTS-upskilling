@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Local Community Event Portal</title>
+
+<link rel="stylesheet" href="styles.css">
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+<script defer src="main.js"></script>
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header id="mainHeader">
+
+<h1>Local Community Event Portal</h1>
+
+<nav>
+
+<a href="#home">Home</a>
+
+<a href="#events">Events</a>
+
+<a href="#gallery">Gallery</a>
+
+<a href="#register">Register</a>
+
+<a href="#news">News</a>
+
+<a href="#contact">Contact</a>
+
+<a href="help.html" target="_blank">Help</a>
+
+</nav>
+
+</header>
+
+<!-- HOME -->
+
+<section id="home">
+
+<div id="welcomeBanner">
+
+Welcome to Community Portal
+
+<span style="color:red;font-weight:bold;">
+Special Offer - Free Registration
+</span>
+
+</div>
+
+</section>
+
+<!-- EVENTS -->
+
+<section id="events">
+
+<h2>Upcoming Events</h2>
+
+<select id="categoryFilter" onchange="filterEvents()">
+
+<option value="all">All Events</option>
+
+<option value="Music">Music</option>
+
+<option value="Workshop">Workshop</option>
+
+<option value="Sports">Sports</option>
+
+</select>
+
+<input
+type="text"
+id="searchBox"
+placeholder="Search Event">
+
+<div id="feeDisplay"></div>
+
+<div id="eventContainer"></div>
+
+</section>
+
+<!-- GALLERY -->
+
+<section id="gallery">
+
+<h2>Event Gallery</h2>
+
+<table>
+
+<tr>
+
+<td>
+
+<img
+src="event1.jpg"
+alt="Music Event"
+title="Music Event"
+class="galleryImg"
+ondblclick="enlargeImage(this)">
+
+<p>Music Festival</p>
+
+</td>
+
+<td>
+
+<img
+src="event2.jpg"
+alt="Sports Event"
+title="Sports Event"
+class="galleryImg"
+ondblclick="enlargeImage(this)">
+
+<p>Sports Day</p>
+
+</td>
+
+<td>
+
+<img
+src="event3.jpg"
+alt="Workshop"
+title="Workshop"
+class="galleryImg"
+ondblclick="enlargeImage(this)">
+
+<p>Workshop</p>
+
+</td>
+
+</tr>
+
+</table>
+
+</section>
+
+<!-- REGISTRATION -->
+
+<section id="register">
+
+<h2>Event Registration</h2>
+
+<form id="registrationForm">
+
+<input
+type="text"
+name="name"
+placeholder="Enter Name"
+required
+autofocus>
+
+<input
+type="email"
+name="email"
+placeholder="Enter Email"
+required>
+
+<input
+type="tel"
+id="phone"
+placeholder="Enter Phone"
+onblur="validatePhone()">
+
+<input type="date" required>
+
+<select id="eventType" onchange="showFee()">
+
+<option value="">Choose Event</option>
+
+<option value="Music">Music</option>
+
+<option value="Workshop">Workshop</option>
+
+<option value="Sports">Sports</option>
+
+</select>
+
+<textarea
+id="feedback"
+placeholder="Feedback">
+</textarea>
+
+<p>
+
+Characters:
+
+<span id="charCount">0</span>
+
+</p>
+
+<button
+id="registerBtn"
+type="submit">
+
+Register
+
+</button>
+
+<output id="outputMessage"></output>
+
+</form>
+
+</section>
+
+<!-- VIDEO -->
+
+<section>
+
+<h2>Event Promo Video</h2>
+
+<video
+width="500"
+controls
+oncanplay="videoReady()">
+
+<source
+src="videos.mp4"
+type="video/mp4">
+
+</video>
+
+<p id="videoStatus"></p>
+
+</section>
+
+<!-- NEWS -->
+
+<section id="news">
+
+<h2>Community News</h2>
+
+<div class="newsColumns">
+
+Community events are important for building strong social connections.
+Residents are encouraged to participate in local activities.
+Workshops improve skills and networking opportunities.
+Music events encourage cultural engagement.
+Sports events promote health and teamwork.
+Community participation strengthens relationships.
+Educational seminars provide knowledge sharing.
+Volunteer programs support social development.
+
+</div>
+
+</section>
+
+<!-- GEOLOCATION -->
+
+<section>
+
+<h2>Find Nearby Events</h2>
+
+<button onclick="findLocation()">
+
+Find Nearby Events
+
+</button>
+
+<p id="locationResult"></p>
+
+</section>
+
+<!-- STORAGE -->
+
+<section>
+
+<h2>User Preferences</h2>
+
+<button onclick="savePreference()">
+
+Save Preference
+
+</button>
+
+<button onclick="clearPreferences()">
+
+Clear Preferences
+
+</button>
+
+</section>
+
+<!-- AJAX SECTION -->
+
+<section>
+
+<h2>Server Registration Demo</h2>
+
+<button onclick="sendRegistration()">
+
+Send Registration
+
+</button>
+
+<p id="ajaxResult"></p>
+
+</section>
+
+<!-- CONTACT -->
+
+<footer id="contact">
+
+<p>
+
+© 2026 Local Community Event Portal
+
+</p>
+
+</footer>
+
+</body>
+
+</html>

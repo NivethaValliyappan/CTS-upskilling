@@ -1,0 +1,463 @@
+/* =====================================
+   GOOGLE FONT
+===================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* =====================================
+   UNIVERSAL SELECTOR
+===================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#f4f7fc;
+    color:#333;
+    line-height:1.6;
+}
+
+/* =====================================
+   HEADER STYLES
+===================================== */
+
+#mainHeader{
+    background:linear-gradient(135deg,#2563eb,#1e40af);
+    color:white;
+    text-align:center;
+    padding:25px;
+    box-shadow:0 3px 10px rgba(0,0,0,0.2);
+}
+
+#mainHeader h1{
+    margin-bottom:10px;
+}
+
+nav{
+    margin-top:10px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:0 15px;
+    transition:0.3s;
+    font-weight:500;
+}
+
+/* Link States */
+
+nav a:link{
+    color:white;
+}
+
+nav a:visited{
+    color:#dbeafe;
+}
+
+nav a:hover{
+    color:#facc15;
+}
+
+nav a:active{
+    color:red;
+}
+
+/* =====================================
+   WELCOME BANNER
+===================================== */
+
+#welcomeBanner{
+    background:linear-gradient(
+    135deg,
+    rgba(96,165,250,1),
+    rgba(37,99,235,1));
+
+    color:white;
+
+    padding:35px;
+
+    margin:25px;
+
+    border-radius:15px;
+
+    text-align:center;
+
+    font-size:1.3rem;
+
+    box-shadow:0 5px 15px rgba(0,0,0,0.2);
+}
+
+.highlight{
+    color:#facc15;
+}
+
+/* =====================================
+   SECTION
+===================================== */
+
+section{
+    padding:40px 8%;
+}
+
+h2{
+    text-align:center;
+    margin-bottom:25px;
+    color:#1e3a8a;
+    text-transform:uppercase;
+    letter-spacing:2px;
+}
+
+/* =====================================
+   FILTERS
+===================================== */
+
+#categoryFilter,
+#searchBox{
+
+    padding:12px;
+
+    margin:10px;
+
+    border-radius:8px;
+
+    border:1px solid #ccc;
+
+    width:250px;
+}
+
+/* =====================================
+   EVENT CARDS
+===================================== */
+
+#eventContainer{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(280px,1fr));
+
+    gap:25px;
+}
+
+/* Event Card */
+
+.eventCard{
+
+    background:white;
+
+    border:1px solid #ddd;
+
+    padding:20px;
+
+    border-radius:15px;
+
+    margin:10px;
+
+    box-shadow:0 5px 20px rgba(0,0,0,0.1);
+
+    transition:0.3s;
+}
+
+.eventCard:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 10px 25px rgba(0,0,0,0.15);
+}
+
+.eventCard h3{
+    color:#2563eb;
+}
+
+.eventCard p{
+    margin:8px 0;
+}
+
+/* =====================================
+   BUTTON STYLES
+===================================== */
+
+button{
+
+    background:#2563eb;
+
+    color:white;
+
+    border:none;
+
+    padding:12px 20px;
+
+    border-radius:8px;
+
+    cursor:pointer;
+
+    transition:0.3s;
+}
+
+button:hover{
+
+    background:#1e40af;
+
+    transform:scale(1.05);
+}
+
+/* =====================================
+   IMAGE GALLERY
+===================================== */
+
+table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+    text-align:center;
+}
+
+th,
+td{
+
+    border:1px solid #ddd;
+
+    padding:15px;
+}
+
+/* Zebra Striping */
+
+tr:nth-child(even){
+
+    background:#f9fafb;
+}
+
+.galleryImg{
+
+    width:100%;
+
+    max-width:300px;
+
+    height:220px;
+
+    object-fit:cover;
+
+    border:4px solid #2563eb;
+
+    border-radius:15px;
+
+    transition:0.3s;
+
+    cursor:pointer;
+}
+
+.galleryImg:hover{
+
+    transform:scale(1.05);
+}
+
+/* =====================================
+   FORM STYLING
+===================================== */
+
+form{
+
+    max-width:600px;
+
+    margin:auto;
+
+    background:white;
+
+    padding:30px;
+
+    border-radius:15px;
+
+    box-shadow:0 5px 20px rgba(0,0,0,0.1);
+}
+
+input,
+textarea,
+select{
+
+    width:100%;
+
+    padding:12px;
+
+    margin:10px 0;
+
+    border:1px solid #ccc;
+
+    border-radius:8px;
+}
+
+input:focus,
+textarea:focus,
+select:focus{
+
+    outline:3px solid #60a5fa;
+}
+
+/* =====================================
+   OUTPUT MESSAGE
+===================================== */
+
+#outputMessage{
+
+    display:block;
+
+    margin-top:15px;
+
+    color:green;
+
+    font-weight:bold;
+}
+
+/* =====================================
+   VIDEO SECTION
+===================================== */
+
+video{
+
+    display:block;
+
+    margin:auto;
+
+    border-radius:15px;
+
+    box-shadow:0 5px 20px rgba(0,0,0,0.2);
+}
+
+/* =====================================
+   NEWS MULTI COLUMN
+===================================== */
+
+.newsColumns{
+
+    column-count:2;
+
+    column-gap:30px;
+
+    column-rule:1px solid gray;
+
+    text-align:justify;
+
+    line-height:1.8;
+}
+
+/* =====================================
+   LOCATION RESULT
+===================================== */
+
+#locationResult{
+
+    text-align:center;
+
+    color:#2563eb;
+
+    font-weight:bold;
+
+    margin-top:20px;
+}
+
+/* =====================================
+   FOOTER
+===================================== */
+
+footer{
+
+    background:#111827;
+
+    color:white;
+
+    text-align:center;
+
+    padding:25px;
+
+    margin-top:40px;
+}
+
+/* =====================================
+   HIDDEN VS DISPLAY NONE
+===================================== */
+
+.hiddenExample{
+    visibility:hidden;
+}
+
+.displayNoneExample{
+    display:none;
+}
+
+/* =====================================
+   ANIMATION
+===================================== */
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(30px);
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+    }
+}
+
+.eventCard{
+
+    animation:fadeUp .7s ease;
+}
+
+/* =====================================
+   RESPONSIVE DESIGN
+===================================== */
+
+@media(max-width:768px){
+
+    nav{
+
+        display:flex;
+
+        flex-direction:column;
+
+        gap:10px;
+    }
+
+    section{
+
+        padding:25px 5%;
+    }
+
+    .newsColumns{
+
+        column-count:1;
+    }
+
+    video{
+
+        width:100%;
+    }
+
+    .galleryImg{
+
+        width:100%;
+    }
+
+    #categoryFilter,
+    #searchBox{
+
+        width:100%;
+    }
+}
